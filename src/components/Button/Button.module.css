@@ -1,0 +1,61 @@
+.button {
+    --height: 0px;
+    --width: 0px;
+    --color: transparent;
+    --border-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--border-color);
+    cursor: pointer;
+    border-radius: calc(var(--height) / var(--border-delimiter));
+}
+
+button.accent {
+    width: var(--width);
+    height: var(--height);
+    color: var(--color-dark-primary);
+    background-color: var(--color-accent);
+}
+
+button.white {
+    width: var(--width);
+    height: var(--height);
+    color: var(--color-dark-primary);
+    background-color: var(--color-light-primary);
+}
+
+button.black {
+    width: var(--width);
+    height: var(--height);
+    color: var(--color-light-primary);
+    background-color: var(--color-dark-primary);
+}
+
+.s {
+    --width: 309px;
+    --height: 57px;
+    gap: 12px;
+    order: 0;
+    padding: 16px 30px;
+    flex-grow: 0;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 23px;
+}
+
+.l {
+    --width: 1297px;
+    --height: 120px;
+    order: 0;
+    gap: 33px;
+    padding: 36px 65px;
+    flex-grow: 0;
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 48px;
+}
+
+.rounded {
+    --border-delimiter: 0.5;
+}

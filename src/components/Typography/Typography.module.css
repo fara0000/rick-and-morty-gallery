@@ -1,0 +1,42 @@
+.typography {
+    --color: inherit;
+    margin: 0;
+    font-size: 18px;
+    font-family: 'NeoGram', sans-serif;
+    line-height: 23px;
+    color: var(--color);
+    font-weight: 400;
+}
+
+.h1 {
+    font-weight: 900;
+    font-size: 85px;
+    line-height: 15px;
+    color: var(--color-light-primary)
+}
+
+.h2 {
+    font-weight: 900;
+    font-size: 65px;
+    line-height: 15px;
+    color: var(--color-light-primary)
+}
+
+.h3 {
+    font-weight: 900;
+    font-size: 50px;
+    line-height: 48px;
+    color: var(--color-light-primary)
+}
+
+.h4 {
+    font-weight: 800;
+    font-size: 28px;
+    color: var(--color-light-primary)
+}
+
+.h5 {
+    font-weight: 400;
+    font-size: 28px;
+    color: var(--color-light-primary)
+}
