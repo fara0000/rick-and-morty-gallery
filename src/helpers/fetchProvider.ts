@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-export const useFetch = <T>(
+export const fetchProvider = <T>(
     method: string,
     url: string,
     urlParams?: string,

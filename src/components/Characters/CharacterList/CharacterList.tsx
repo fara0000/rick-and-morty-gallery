@@ -5,7 +5,7 @@ import styles from './CharacterList.module.css';
 import * as urls from 'src/urls'
 import * as types from 'src/types'
 import { CharacterCard } from "src/components/Characters";
-import {useFetch} from "src/hooks/useFetch";
+import {fetchProvider} from "src/helpers/fetchProvider";
 import axios from "axios";
 
 export const CharacterList: React.FC = () => {
@@ -14,7 +14,7 @@ export const CharacterList: React.FC = () => {
     const [fetching, setFetching] = useState(true);
 
     const fetchCharacters = async () => {
-        const data = await useFetch("GET", urls.getAllCharacters, `?page=${currentPage}`)
+        const data = await fetchProvider("GET", urls.getAllCharacters, `?page=${currentPage}`)
 
         setCharacters([...characters, ...data.results])
         setFetching(false);
