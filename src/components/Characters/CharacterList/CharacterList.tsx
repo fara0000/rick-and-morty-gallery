@@ -17,6 +17,7 @@ export const CharacterList: React.FC = () => {
         const data = await fetchProvider("GET", urls.getAllCharacters, `?page=${currentPage}`)
 
         setCharacters([...characters, ...data.results])
+        setCurrentPage(prevState => prevState + 1)
         setFetching(false);
     }
 
@@ -37,7 +38,6 @@ export const CharacterList: React.FC = () => {
 
     const scrollHandler = (event: any) => {
         if(event.target.documentElement.scrollHeight - (event.target.documentElement.scrollTop + window.innerHeight) < 100) { // приближаемся к концу страницы
-            setCurrentPage(currentPage + 1)
             setFetching(true)
         }
     }
